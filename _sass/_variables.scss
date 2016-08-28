@@ -1,0 +1,62 @@
+$white: #fff;
+$black: #000;
+$dark: #333;
+$grey: #d4d4d4;
+$overlay: #2c2d33;
+$green: #98B232;
+
+$red: #ee5f5b;
+$blue: #19b5fe;
+$yellow: #f89406;
+
+$base-font: 'Open Sans', sans-serif;
+$code-font: 'Inconsolata', monospace;
+
+@mixin clearfix {
+  *zoom: 1;
+
+  &:before,
+  &:after {
+    display: table;
+    content: '';
+    line-height: 0;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin projects-icon-part {
+  border: 2px solid $grey;
+  border-radius: 3px;
+  content: '';
+  display: block;
+  height: 15px;
+  width: 15px;
+}
+
+@mixin posts-icon-part ($index) {
+  background: $white;
+  border: 2px solid $grey;
+  content: '';
+  height: 25px;
+  position: absolute;
+  right: calc(#{$index} * 4px);
+  top: calc(#{$index} * 4px);
+  width: 20px;
+}
+
+@mixin left-background ($image) {
+  background: linear-gradient(rgba(44,45,51,0.9), rgba(44,45,51,0.9)), url($image) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@mixin vendor-prefix ($property, $value) {
+  -webkit-#{$property}: #{$value};
+     -moz-#{$property}: #{$value};
+      -ms-#{$property}: #{$value};
+       -o-#{$property}: #{$value};
+          #{$property}: #{$value};
+}

@@ -1,0 +1,143 @@
+#page.apps {
+  #left {
+    color: $grey;
+    width: 40%;
+
+    .logo {
+      left: 2rem;
+      position: absolute;
+      opacity: 0.8;
+      top: 2rem;
+
+      img {
+        height: auto;
+        width: 10rem;
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+
+    .donate {
+      display: block;
+      font-size: 3.5rem;
+      font-weight: normal;
+      margin-top: 2rem;
+      text-transform: capitalize;
+
+      i {
+        color: $grey;
+        font-size: 3rem;
+      }
+    }
+  }
+
+  #right {
+    width: 60%;
+
+    .content {
+      display: block;
+      padding: 6rem 0 0 0;
+    }
+
+    article a {
+      border: 0;
+    }
+
+    section {
+      position: relative;
+      margin-bottom: 3em;
+
+      * {
+        z-index: 1;
+      }
+
+      &:before {
+        background: $green;
+        content: '';
+        display: block;
+        height: 0.2rem;
+        margin: 0 auto 3rem auto;
+        width: 20rem;
+      }
+
+      &:first-child:before {
+        display: none;
+      }
+
+      &:after {
+        background-position: top right;
+        background-repeat: no-repeat;
+        content: '';
+        height: 16.6rem;
+        opacity: 0.2;
+        position: absolute;
+        right: 0;
+        top: 2rem;
+        width: 21.1rem;
+        z-index: 0;
+      }
+
+      h2 {
+        margin-bottom: 1rem;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+        margin-top: 0;
+        padding-left: 1rem;
+
+        strong {
+          font-weight: 300;
+        }
+      }
+
+      a.download,
+      a.github,
+      a.docs,
+      a.nuget {
+        text-transform: lowercase;
+        padding-left: 2rem;
+      }
+
+      a svg {
+        fill: $green;
+        display: inline-block;
+        height: 1.6rem;
+        width: 1.6rem;
+      }
+
+      .links {
+        a:first-child {
+          padding-left: 1rem;
+        }
+
+        a:nth-child(-n+2) {
+        font-size: 2rem;
+        }
+      }
+
+      &.gnp:after {
+        background-image: url(../images/bg-gnp.png);
+      }
+
+      &.brew:after {
+        background-image: url(../images/bg-brew.png);
+        background-size: 12.6rem 16.6rem;
+        -webkit-filter: invert(100%);
+        filter: invert(100%);
+      }
+
+      &.spp:after {
+        background-image: url(../images/bg-spp.png);
+        -webkit-filter: invert(100%);
+        filter: invert(100%);
+      }
+
+      &.rumshot:after {
+        background-image: url(../images/bg-rumshot.png);
+      }
+    }
+  }
+}

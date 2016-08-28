@@ -1,0 +1,28 @@
+---
+sitemap: false
+---
+
+// these variables need to be defined here, as this is the only file that jekyll
+// will process liquid templates for.
+$background-home: '{{ site.baseurl }}/{{ site.background.home }}';
+$background-post: '{{ site.baseurl }}/{{ site.background.post }}';
+$background-post-list: '{{ site.baseurl }}/{{ site.background.post-list }}';
+
+@import "variables";
+@import "reset";
+@import "base";
+@import "utilities";
+@import "syntax";
+
+// components
+@import "nav";
+@import "sidebar";
+
+// pages
+@import "404";
+@import "apps";
+@import "home";
+@import "post";
+@import "post-list";
+@import "projects";
+@import "tags";
