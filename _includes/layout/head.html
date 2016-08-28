@@ -1,0 +1,52 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  {% if page.title %}
+    <title>{{ page.title | markdownify | strip_html | strip_newlines | escape_once }} &#9642; {{ site.title }}</title>
+  {% else %}
+    <title>{{ site.title }}</title>
+  {% endif %}
+
+  {% if page.excerpt %}
+    <meta name="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">
+  {% else %}
+    <meta name="description" content="{{ site.description }}">
+  {% endif %}
+
+  {% if page.tags %}
+    <meta name="keywords" content="{{ page.tags | join: ', ' }}">
+  {% endif %}
+
+  {% include layout/meta-twitter.html %}
+  {% include layout/meta-opengraph.html %}
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  {% feed_meta %}
+
+  <link rel="shortcut icon" href="{{ site.baseurl }}/assets/images/favicons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/images/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/images/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="{{ site.baseurl }}/assets/images/favicons/manifest.json">
+  <link rel="mask-icon" href="{{ site.baseurl }}/assets/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/main.css">
+
+  {% if page.image %}
+  {% capture image %}{{ page.image }}{% endcapture %}
+  {% unless image contains 'http://' or image contains 'https://' %}{% capture image %}{{ site.baseurl }}/{{ image }}{% endcapture %}{% endunless %}
+  <style type="text/css">
+    #left {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{ image }}) no-repeat;
+      background-size: cover;
+    }
+  </style>
+  {% endif %}
+</head>

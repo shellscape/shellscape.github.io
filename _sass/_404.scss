@@ -1,0 +1,42 @@
+#page.fourohfour {
+  #right {
+    position: relative;
+
+    footer { display: none; }
+
+    h1 {
+      color: #474747;
+      font-size: 3.5rem;
+      font-weight: 300;
+      margin-top: 3rem;
+      padding-right: 16%;
+
+      strong:first-child {
+        color: inherit;
+        font-size: inherit;
+        font-weight: 300;
+      }
+
+      strong {
+        color: $green;
+        font-size: 8rem;
+        font-weight: 400;
+      }
+    }
+
+    p {
+      color: $grey;
+      font-size: 1.4rem;
+      padding: 10rem 30% 0 0;
+    }
+
+    img {
+      bottom: 0;
+      height: 55rem;
+      max-width: 77.5rem;
+      position: absolute;
+      right: -32.4rem;
+      width: 77.5rem;
+    }
+  }
+}

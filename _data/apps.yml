@@ -1,0 +1,55 @@
+- title: Gmail Notifier+
+  alt: Gmail Notifier Plus
+  className: gnp
+  version: 3.7 (Semptember 23nd, 2014)
+  desc: >
+    Gmail Notifier Plus is a small application used to monitor multiple Gmail
+    and Google Apps Mail accounts from a single, compact point. With its slick,
+    native look, GNP notifies you in a variety of ways of your new mail, and
+    allows you to quickly nagivate older new mail without opening a browser.
+  reqs: Windows 7+, .NET 4.0
+  urls:
+    download: https://github.com/shellscape/Gmail-Notifier-Plus/releases/download/v3.7/Gmail-Notifier-Plus-3.7.msi
+    github: http://github.com/shellscape/Gmail-Notifier-Plus
+    req: http://www.microsoft.com/en-us/download/details.aspx?id=17718
+
+- title: Brew for ASP.NET
+  className: brew
+  version: 1.0.1 (May 30th, 2013)
+  desc: >
+    Brew is an open source library of interface components for ASP.NET which
+    utilitizes jQuery and jQuery UI. If Brew looks familiar, that's for good
+    reason. Brew is a heavily refactored fork of the Juice UI project.
+  reqs: Windows, .NET 4.5
+  urls:
+    download: http://nuget.org/packages/brew
+    github: http://github.com/shellscape/Brew
+    req: http://www.microsoft.com/en-us/download/details.aspx?id=30653
+    nuget: https://bitbucket.org/shellscape/brew/downloads/Brew.1.0.nupkg
+    docs: https://github.com/shellscape/Brew/wiki
+
+- title: Simple Power+
+  alt: Simple Power Plus
+  className: spp
+  version: 3.7 (Semptember 23nd, 2014)
+  desc: >
+    Simple Power Plus is a small application that provides access to power
+    options in Windows. Designed for use in Windows 8 desktop mode, without a
+    Start Menu replacement.
+  reqs: Windows 7+, .NET 4.0
+  urls:
+    download: https://bitbucket.org/shellscape/simple-power-plus/downloads/Simple-Power-Plus-1.1.zip
+    github: http://github.com/shellscape/Simple-Power-Plus
+    req: http://www.microsoft.com/en-us/download/details.aspx?id=17718
+
+- title: Rumshot
+  className: rumshot
+  desc: >
+    Rumshot isn’t your average screenshot utility. Rumshot uses themes to
+    generate stylish screenshot previews, in addition to saving your screenshot
+    in a number of formats.
+  reqs: Windows 2000+, .NET 2.0+
+  urls:
+    download: https://bitbucket.org/shellscape/rumshot/downloads/Rumshot11.zip
+    github: http://github.com/shellscape/rumshot
+    req: http://www.microsoft.com/en-us/download/details.aspx?id=17718

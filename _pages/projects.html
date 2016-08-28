@@ -1,0 +1,27 @@
+---
+layout: projects
+title: Projects
+permalink: /projects
+pageId: projects
+---
+
+<p>
+  If you're looking for, or are interested in the software I've written in the past -
+  including Gmail Notifier Plus - please head over to the
+  <a href="{{ site.baseurl }}/apps">Apps</a> page.
+</p>
+
+<article>
+{% for project in site.data.projects %}
+  {% if project.repo %}
+    {% assign repo = project.repo %}
+  {% else %}
+    {% capture repo %}{{ site.github }}/{{ project.title }}{% endcapture %}
+  {% endif %}
+  <section{% if project.inprogress %} class="inprogress"{% endif %}>
+    <h2>{{ project.title }}</h2>
+    <h3>{{ project.desc }}</h3>
+    <a href="https://github.com/{{ repo }}" title="Github: {{ project.title }}"></a>
+  </section>
+{% endfor %}
+</article>

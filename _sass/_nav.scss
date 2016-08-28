@@ -1,0 +1,143 @@
+nav {
+  position: absolute;
+  right: 3.5rem;
+  top: 3rem;
+  height: auto;
+  text-align: right;
+
+  a {
+    display: inline-block;
+    margin-left: 2em;
+    position: relative;
+    @include vendor-prefix(user-select, none);
+    cursor: pointer;
+  }
+
+  label {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2rem;
+    color: darken($white, 40);
+    text-transform: uppercase;
+    padding-top: 0.3rem;
+    @include vendor-prefix(user-select, none);
+    cursor: pointer;
+  }
+}
+
+#nav-posts {
+  width: 3.2rem;
+  height: 3.2rem;
+  background: $white;
+
+  &:before {
+    @include posts-icon-part(0);
+  }
+
+  div {
+    @include posts-icon-part(1);
+  }
+
+  &:after {
+    @include posts-icon-part(2);
+  }
+
+  &:hover {
+    border-color: $green;
+
+    &:before, &:after, div {
+      border-color: $green;
+    }
+  }
+
+  label {
+    right: 9rem;
+  }
+}
+
+#nav-projects {
+  background: transparent;
+  cursor: pointer;
+  height: auto;
+  width: 3.2rem;
+
+  &:before, &:after, div:before, div:after {
+    @include projects-icon-part;
+  }
+
+  div {
+    width: 1.5rem;
+    height: 3.2rem;
+    float: right;;
+    margin: -1.5rem 0 0 0;
+  }
+
+  &:after, div:after {
+    margin-top: 0.2rem;
+  }
+
+  &:hover {
+    border-color: $green;
+
+    &:before, &:after, div:before, div:after {
+      border-color: $green;
+    }
+  }
+
+  &.active {
+    position: fixed;
+  }
+
+  label {
+    right: 2rem;
+  }
+}
+
+#nav-sidebar {
+  color: #505050;
+  background: transparent;
+  cursor: pointer;
+  z-index: 3;
+  width: auto;
+  height: auto;
+
+  label {
+    display: block !important;
+    position: relative;
+
+    &:before {
+      display: inline-block;
+      width: 3.2rem;
+      height: 3.2rem;
+      content: "";
+      background-image: linear-gradient(to bottom,
+                          $grey, $grey 10%, #fff 10%, #fff 30%,
+                          $grey 30%, $grey 40%, #fff 40%, #fff 60%,
+                          $grey 60%, $grey 70%, #fff 70%, #fff 90%,
+                          $grey 90%, $grey 100%);
+    }
+
+    &:hover,
+    &:active {
+      &:before {
+        background-image: linear-gradient(to bottom,
+                            $green, $green 10%, #fff 10%, #fff 30%,
+                            $green 30%, $green 40%, #fff 40%, #fff 60%,
+                            $green 60%, $green 70%, #fff 70%, #fff 90%,
+                            $green 90%, $green 100%);
+      }
+    }
+  }
+}
+
+#sidebar-checkbox:checked ~ main {
+  & #nav-sidebar label:before {
+    background-image: linear-gradient(to bottom,
+                        $green, $green 10%, #fff 10%, #fff 30%,
+                        $green 30%, $green 40%, #fff 40%, #fff 60%,
+                        $green 60%, $green 70%, #fff 70%, #fff 90%,
+                        $green 90%, $green 100%);
+  }
+}

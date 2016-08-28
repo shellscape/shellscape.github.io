@@ -1,0 +1,233 @@
+#projects {
+  #left {
+    color: $grey;
+    width: 40%;
+
+    .logo {
+      left: 2rem;
+      position: absolute;
+      opacity: 0.8;
+      top: 2rem;
+
+      img {
+        height: auto;
+        width: 10rem;
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+
+    h3 {
+      margin-top: 14rem;
+    }
+
+    h4 {
+      padding-left: 1rem;
+
+      i {
+        padding-right: 1rem;
+      }
+    }
+
+    legend {
+      display: block;
+      margin-top: 1rem;
+      text-align: center;
+      width: 100%;
+
+      span, ul, li {
+        display: inline-block;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+
+      li {
+        height: 1rem;
+        opacity: 0.7;
+        width: 1rem;
+      }
+
+      span:first-child {
+        padding-right: 1rem;
+      }
+
+      span:last-child {
+        padding-left: 1rem;
+      }
+    }
+  }
+
+  #right {
+    width: 60%;
+
+    .content {
+      display: block;
+      padding: 6rem 0 0 0;
+    }
+
+    article {
+      background: $grey;
+      padding: 0.1rem;
+    }
+
+    p {
+      font-size: 1.6rem;
+      font-style: italic;
+      margin: 3rem 0;
+    }
+
+    section {
+      background: #fff;
+      display: block;
+      margin-top: 0.1rem;
+      overflow: hidden;
+      padding: 1rem;
+      position: relative;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:after {
+        content: '';
+        padding: 1.5rem; // arrow size
+        position: absolute;
+        border: solid transparent;
+        border-width: 0 0 1rem 1rem;
+        box-shadow: 1px -1px 0 1px $grey inset;
+        right: 2rem;
+        top: 2rem;
+        transform: rotate(225deg);
+        transition: 0.2s;
+
+        &:hover {
+          box-shadow: 2px -2px 0 2px $green inset;
+        }
+      }
+
+      &:hover {
+
+        h2,
+        h3 {
+          color: $green;
+        }
+
+        &:after {
+          box-shadow: 1px -1px 0 1px $green inset;
+        }
+      }
+
+      a {
+        border: 0;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+      }
+
+      h2 {
+        font-size: 2rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+        margin-top: 0;
+
+        strong {
+          font-weight: 400;
+        }
+      }
+
+      h3 {
+        margin: 0;
+        padding: 0 6rem 0 1rem;
+
+        strong {
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
+
+#github-graph {
+  height: 11.2rem;
+  margin-top: 1rem;
+  overflow: hidden;
+  position: relative;
+  width: 39rem;
+
+  svg {
+
+    text {
+      fill: $grey;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", $base-font;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+
+    rect {
+      opacity: 0.7;
+    }
+
+    > g > g &:nth-child(-n+26) {
+      display: none;
+    }
+
+    .month {
+      transform: translateX(-32.5rem);
+    }
+  }
+
+  .spinner {
+    height: 1rem;
+    left: 50%;
+    margin: -0.5rem 0 0 -3rem;
+    position: absolute;
+    top: 50%;
+    width: 6rem;
+
+    .dot {
+      width: 1rem;
+      height: 1rem;
+      border: 0.2rem solid white;
+      border-radius: 50%;
+      float: left;
+      margin: 0 0.5rem;
+      transform: scale(0);
+      animation: fx 1000ms ease infinite 0ms;
+
+      &:nth-child(2) {
+        animation: fx 1000ms ease infinite 300ms;
+      }
+
+      &:nth-child(3) {
+        animation: fx 1000ms ease infinite 600ms;
+      }
+    }
+
+    @keyframes fx {
+      50% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+
+
+// #github-graph .github-graph-none { fill: #ccc; }
+// #github-graph .github-graph-litte { fill: #d6e685; }
+// #github-graph .github-graph-some { fill: #8cc665; }
+// #github-graph .github-graph-more { fill: #44a340; }
+// #github-graph .github-graph-most{ fill: #1e6823; }

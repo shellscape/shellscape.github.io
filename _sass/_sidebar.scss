@@ -1,0 +1,121 @@
+
+.sidebar {
+  color: rgba(255, 255, 255, .6);
+  background-color: #333;
+  bottom: 0;
+  font-size: 1.5rem;
+  left: auto;
+  overflow-y: auto;
+  position: fixed;
+  right: -28rem;
+  top: 0;
+  transition: all .3s ease-in-out;
+  visibility: hidden;
+  width: 28rem;
+
+  a {
+    color: #fff;
+    font-weight: normal;
+  }
+
+  .social-links {
+    margin-top: 2rem;
+    text-align: center;
+  }
+}
+
+@media (min-width: 60em) {
+  .sidebar {
+    font-size: 1.4rem;
+  }
+}
+
+.sidebar-item {
+  padding: 2rem;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.sidebar-nav {
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  right: 0;
+  text-align: left;
+  top: auto;
+}
+
+.sidebar-nav-item {
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.1);
+  display: block;
+  padding: 1rem 2rem;
+  margin: 0;
+}
+
+.sidebar-nav-item.active,
+a.sidebar-nav-item:hover,
+a.sidebar-nav-item:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: transparent;
+  text-decoration: none;
+}
+
+@media (min-width: 96em) {
+  .sidebar-item {
+    padding: 3rem;
+  }
+
+  .sidebar-nav-item {
+    padding-left:  3rem;
+    padding-right: 3rem;
+  }
+}
+
+/* Hide the sidebar checkbox that we toggle with `#nav-sidebar` */
+.sidebar-checkbox {
+  opacity: 0;
+  position: absolute;
+  @include vendor-prefix(user-select, none);
+}
+
+@media print {
+  #nav-sidebar {
+    display: none;
+  }
+}
+
+/* Slide effect
+ *
+ * Handle the sliding effects of the sidebar and content in one spot, seperate
+ * from the default styles.
+ *
+ * As an a heads up, we don't use `transform: translate3d()` here because when
+ * mixed with `position: fixed;` for the sidebar toggle, it creates a new
+ * containing block. Put simply, the fixed sidebar toggle behaves like
+ * `position: absolute;` when transformed.
+ *
+ * Read more about it at http://meyerweb.com/eric/thoughts/2011/09/12/.
+ */
+
+main,
+.sidebar,
+#nav-sidebar {
+  backface-visibility: hidden;
+}
+
+main,
+#nav-sidebar {
+  transition: transform .3s ease-in-out;
+}
+
+#sidebar-checkbox:checked + .sidebar {
+  visibility: visible;
+  z-index: 10;
+}
+
+#sidebar-checkbox:checked ~ #sidebar,
+#sidebar-checkbox:checked ~ main,
+#sidebar-checkbox:checked ~ #nav-sidebar {
+  transform: translateX(-28rem);
+}

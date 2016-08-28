@@ -1,0 +1,41 @@
+---
+layout: base
+id: post
+---
+{% capture date %}
+{% assign d = page.date | date: "%-d"  %}
+{{ page.date | date: "%B" }}
+{% case d %}
+  {% when '1' or '21' or '31' %}{{ d }}st
+  {% when '2' or '22' %}{{ d }}nd
+  {% when '3' or '23' %}{{ d }}rd
+  {% else %}{{ d }}th
+  {% endcase %},
+{{ page.date | date: "%Y" }}
+{% endcapture %}
+<article>
+  <div class="logo">
+    <img src="{{ site.baseurl }}/assets/images/{{ site.logo }}">
+  </div>
+  <time>{{ date }}</time>
+  {{ content }}
+</article>
+
+{% include share.html %}
+{% include page-pagination.html %}
+
+<div id="disqus_thread"></div>
+<script>
+
+var disqus_config = function () {
+  this.page.url = '{{ page.url | replace:'index.html','' | prepend: site.url }}';
+  this.page.identifier = '{{ page.id }}';
+};
+
+(function() {
+    var d = document, s = d.createElement('script');
+    s.src = '//shellscape-software.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+</script>
