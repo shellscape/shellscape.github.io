@@ -1,0 +1,106 @@
+---
+layout: page
+title: Apps
+permalink: /apps
+pageId: apps
+contentId: apps
+scripts:
+  - /assets/js/github-graph.js
+---
+
+
+<article>
+
+{% for app in site.data.apps %}
+  <section class="{{ app.className }}">
+    <h2>{{ app.title }}</h2>
+    <h3>Current Version: <span>{{ app.version }}</span></h3>
+    <h3 class="req">System Requirements: {{ app.reqs }} (<a href="{{ app.urls.req }}" target="_blank">download</a>)</h3>
+    <p>{{ app.desc }}</p>
+    <div class="links">
+      <a href="{{ app.urls.download }}" class="download">
+        Download
+        <i class="fa fa-cloud-download" aria-hidden="true"></i>
+      </a>
+      <a href="{{ app.urls.github }}" target="_blank" class="github" title="Source Code: {{ app.alt }}">
+        Source Code
+        <i class="fa fa-github" aria-hidden="true"></i>
+      </a>
+      {% if app.urls.docs %}
+      <a href="{{ app.urls.docs }}" target="_blank" class="docs" title="Documentation">
+        User Guide
+        <i class="fa fa-book" aria-hidden="true"></i>
+      </a>
+      {% endif %}
+      {% if app.urls.nuget %}
+      <a href="{{ app.urls.nuget }}" target="_blank" class="nuget" title="Source Code: {{ app.alt }}">
+        NuGet Package
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        	 width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+        <path d="M2.975,1c1.091,0,1.974,0.884,1.974,1.975S4.065,4.948,2.975,4.948S1,4.065,1,2.975S1.884,1,2.975,1z M17.359,23h-6.77
+        	c-3.116,0-5.642-2.525-5.642-5.641v-6.77c0-3.116,2.525-5.642,5.642-5.642h6.77C20.475,4.948,23,7.474,23,10.59v6.77
+        	C23,20.475,20.475,23,17.359,23z M17.077,12.846c-2.337,0-4.231,1.895-4.231,4.231s1.895,4.23,4.231,4.23s4.23-1.894,4.23-4.23
+        	S19.414,12.846,17.077,12.846z M9.743,7.205c-1.401,0-2.538,1.137-2.538,2.538c0,1.402,1.137,2.539,2.538,2.539
+        	c1.402,0,2.539-1.137,2.539-2.539C12.282,8.342,11.146,7.205,9.743,7.205z"/>
+        </svg>
+      </a>
+      {% endif %}
+    </div>
+  </section>
+{% endfor %}
+
+<!-- <i class="fa fa-book" aria-hidden="true"></i>
+
+  <section class="gnp">
+    <a href="http://github.com/shellscape/Gmail-Notifier-Plus" target="_blank" class="github" title="Source Code: Gmail Notifier Plus">Source Code</a>
+    <h2>Gmail Notifier+</h2>
+    <h3>Current Version:<span>3.7 (Semptember 23nd, 2014)</span></h3>
+    <p>
+      Gmail Notifier Plus is a small application used to monitor multiple Gmail and Google Apps Mail
+      accounts from a single, compact point. With its slick, native look, GNP notifies you in a variety
+      of ways of your new mail, and allows you to quickly nagivate older new mail without opening a browser.
+    </p>
+    <span class="req">System Requirements: Windows 7/8, .NET 4.0 (<a href="http://www.microsoft.com/en-us/download/details.aspx?id=17718" target="_blank">download</a>)</span>
+    <a href="https://github.com/shellscape/Gmail-Notifier-Plus/releases/download/v3.7/Gmail-Notifier-Plus-3.7.msi" class="download">
+      Download
+      <i class="fa fa-cloud-download" aria-hidden="true"></i>
+    </a>
+  </section>
+
+  <section class="brew">
+    <a href="http://github.com/shellscape/Brew" target="_blank" class="github" title="Source Code: Brew">Source Code</a>
+    <h2>Brew for ASP.NET</h2>
+    <h3>Current Version:<span>1.0.1 (May 30th, 2013)</span></h3>
+    <p>
+      Brew is an open source library of interface components for ASP.NET which utilitizes jQuery and jQuery UI.
+      If Brew looks familiar, that's for good reason. Brew is a heavily refactored fork of the Juice UI project.
+    </p>
+    <span class="req">System Requirements: Windows, .NET 4.5 (<a href="http://www.microsoft.com/en-us/download/details.aspx?id=30653" target="_blank">download</a>)</span>
+    <a href="https://github.com/shellscape/Brew/wiki">Wiki</a>
+    <a href="brew">Demos</a>
+    <a href="http://nuget.org/packages/brew" class="nuget">Download</a>
+    <a href="https://bitbucket.org/shellscape/brew/downloads/Brew.1.0.nupkg" class="download dimmed">NuGet Package</a>
+  </section>
+
+  <section id="spp">
+    <a href="http://github.com/shellscape/Simple-Power-Plus" target="_blank" class="github" title="Source Code: Simple Power Plus">Source Code</a>
+    <h2>Simple Power+</h2>
+    <h3>Current Version:<span>1.1 (January 19th, 2013)</span></h3>
+    <p>
+      Simple Power Plus is a small application that provides access to power options in Windows. Designed for use in Windows 8 desktop mode, without a Start Menu replacement.
+    </p>
+    <span class="req">System Requirements: Windows 7/8, .NET 4.0 (<a href="http://www.microsoft.com/en-us/download/details.aspx?id=17718" target="_blank">download</a>)</span>
+    <a href="https://bitbucket.org/shellscape/simple-power-plus/downloads/Simple-Power-Plus-1.1.zip" class="download">Download</a>
+  </section>
+
+  <section id="rumshot">
+    <a href="http://github.com/shellscape/rumshot" target="_blank" class="github" title="Source Code: Rumshot">Source Code</a>
+    <h2><strong>Rum</strong>shot</h2>
+    <p>
+      Rumshot isn’t your average screenshot utility. Rumshot uses themes to generate stylish
+      screenshot previews, in addition to saving your screenshot in a number of formats.
+    </p>
+    <span class="req">System Requirements: Windows 2000+, .NET 2.0+ (<a href="http://www.microsoft.com/en-us/download/details.aspx?id=17718" target="_blank">download</a>)</span>
+    <a href="https://bitbucket.org/shellscape/rumshot/downloads/Rumshot11.zip" class="download">Download</a>
+  </section> -->
+</article>

@@ -1,0 +1,23 @@
+- title: Purebook
+  desc: An extension for a pure, clean Facebook experience
+  inprogress: true
+
+- title: Lesshint
+  desc: A tool to aid you in writing clean and consistent Less
+  repo: lesshint/lesshint
+
+- title: postcss-values-parser
+  desc: A CSS property value parser for PostCSS
+  repo: lesshint/postcss-values-parser
+
+- title: babel-plugin-async-to-plain-generator
+  desc: Transform async functions into non-wrapped ES2015 generators
+
+- title: gulp-scan
+  desc: A Gulp plugin to scan a file for a particular string or expression
+
+- title: OctoGerrit
+  desc: A modern, clean, and usable theme for Gerrit
+
+- title: clearcut
+  desc: A utility for wrapping the browser console logging mechanisms

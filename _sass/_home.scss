@@ -1,0 +1,185 @@
+
+#me {
+  border: 0.1rem solid #fff;
+  border-radius: 50%;
+  display: inline-block;
+  height: 14.8rem;
+  left: 50%;
+  margin-left: -7.4rem;
+  position: absolute;
+  top: 7.4rem;
+  width: 14.8rem;
+}
+
+#home #right {
+  display: block;
+
+  .content {
+    display: block;
+    height: auto;
+    max-width: 80rem;
+  }
+}
+
+.main-info,
+.about-info {
+  margin: 0 auto;
+  max-width: 40rem;
+  position: relative;
+  text-align: center;
+  width: 100%;
+
+  h1, h2 {
+    font-size: 3rem;
+    font-weight: 300;
+    position: relative;
+
+    &:after {
+      background: $green;
+      bottom: -2rem;
+      content: "";
+      height: 0.2rem;
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
+      width: 10rem;
+    }
+  }
+
+  h1 {
+    strong {
+      font-weight: 700;
+    }
+  }
+
+  h3 {
+    font-size: 2.1rem;
+    font-weight: 300;
+    margin-top: 3rem;
+  }
+
+  p {
+    font-size: 2.1rem;
+    line-height: 3rem;
+    margin: 1rem 0;
+    padding-top: 2.5rem;
+  }
+}
+
+.main-info {
+  color: $white;
+  z-index: 1;
+
+  h1 {
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-size: 2.1rem;
+    line-height: 3.0rem;
+    margin: 1rem 0;
+    padding-top: 2.5rem;
+
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.about-info {
+  text-align: left;
+
+  h1, h2 {
+    color: lighten($black, 27.8431);
+    font-size: 3.5rem;
+
+    &:after {
+      background: $green;
+      left: 0;
+      position: absolute;
+      top: auto;
+      transform: none;
+      width: 20rem;
+    }
+  }
+
+  p {
+    color: darken($white, 40);
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    margin: 1rem 0;
+    padding-top: 0;
+
+    &:first-of-type {
+      padding-top: 3.5rem;
+    }
+  }
+}
+
+ul.social-links {
+  font-size: 1em;
+  margin-top: 3rem;
+  overflow: hidden;
+
+  li {
+    border: 0.1rem solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    height: 4.2rem;
+    margin-right: 1rem;
+    position: relative;
+    text-align: center;
+    transform: translateZ(0);
+    transition-property: color;
+    transition-duration: 0.3s;
+    vertical-align: middle;
+    width: 4.2rem;
+
+    &:before {
+      background-image: linear-gradient(to top, $green 50%, transparent 50%);
+      background-size: 200% 200%;
+      border-radius: 50%;
+      bottom: 0;
+      content: "";
+      height: 4rem;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: background-position 0.2s;
+      width: 4rem;
+      z-index: -1;
+    }
+
+    &:hover {
+      &:before {
+        background-position: 0 100%;
+        transition: background-position 0.2s;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      color: $white;
+      display: inline-block;
+      padding: 1rem 0 0 0;
+
+      i {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  .social-github {
+    padding: 0.8rem 0 0 0;
+
+    .fa-github {
+      font-size: 2.4rem;
+    }
+  }
+}

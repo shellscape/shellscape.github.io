@@ -1,0 +1,86 @@
+#page.tags #right {
+  h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    position: relative;
+    padding-bottom: 1rem;
+
+    &:after {
+      content: "";
+      width: 10rem;
+      height: 0.2rem;
+      background: $green;
+      bottom: 0rem;
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: rgba($overlay, 0.7);
+  }
+}
+
+// entry meta used in tags and categories page
+#tags-counts {
+  padding-top: 2rem;
+
+  ul {
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+
+    a {
+      color: lighten($black, 45);
+    }
+
+    li {
+      list-style-type: none;
+      display: inline;
+    }
+
+    .tag,
+    .category {
+      display: inline-block;
+      background-color: darken($white, 3%);
+      border-radius: 0.2rem;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+      margin: 0.2rem 0.5rem;
+      font-size: 1.3rem;
+      border: none !important;
+
+      span {
+        float: left;
+        padding: 0.2rem 0.6rem;
+      }
+
+      .count {
+        background-color: darken($white, 8%);
+      }
+
+      &:hover {
+        background-color: darken($white, 8%);
+      }
+    }
+  }
+}
+
+#tags-post-list {
+  ul {
+    margin: 0;
+    padding: 0 0 1rem 0;
+  }
+
+  li {
+    list-style-type: none;
+    font-size: 1.6rem;
+    padding-left: 1rem;
+
+    a {
+      color: $green;
+      border: none !important;
+    }
+  }
+}

@@ -1,0 +1,304 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  font-weight: 300;
+}
+
+html,
+body {
+  background: $white;
+  color: $overlay;
+  font-family: $base-font;
+  font-size: 10px;
+  height: 100%;
+  line-height: 1.2;
+  overflow: hidden;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+::selection {
+  background: $green;
+  color: $white;
+  text-shadow: none;
+}
+
+a {
+  color: $green;
+  outline: none;
+  text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:focus,
+a:visited {
+  color: $green;
+}
+
+caption,
+th,
+td {
+  font-weight: normal;
+  text-align: left;
+  vertical-align: middle;
+}
+
+q,
+blockquote {
+  quotes: none;
+}
+
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  content: '';
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+// h tags
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $base-font;
+  font-weight: 300;
+  margin: 2rem 0 0.5rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1.5rem;
+}
+
+ul {
+  list-style: square;
+  padding: 0;
+}
+
+figure {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 2em 0;
+  @include clearfix();
+
+  figcaption {
+    color: lighten($black, 50%);
+    font-size: 0.85em;
+    margin-bottom: 0.5em;
+    text-align: center;
+    width: 100%;
+  }
+
+  img {
+    margin-bottom: 10px;
+  }
+
+  > a {
+    border: none !important;
+    display: block;
+  }
+}
+
+img {
+  display: block;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+  image-rendering: optimizeQuality;
+  margin: 0 auto;
+  max-width: 100%;
+  width: auto;
+}
+
+blockquote {
+  border-left: 0.25em solid $grey;
+  font-style: italic;
+  margin: 2em 1em 2em 0;
+  padding: 0 1em;
+
+  cite {
+    font-size: 0.85em;
+    font-style: italic;
+
+    &:before {
+      content: "\2014";
+      padding-right: 5px;
+    }
+  }
+}
+
+cite {
+  font-size: 0.85em;
+  font-style: italic;
+}
+
+dt {
+  background-color: darken($white, 5%);
+  border: 1px solid darken($white, 7%);
+  font-weight: bold;
+  padding: 0.5em;
+}
+
+dd {
+  border: 1px solid darken($white, 7%);
+  border-top: 0;
+  margin: 0 0 2em 0;
+  padding: 0.5em 1em;
+}
+
+table {
+  border: 1px solid darken($white, 7%);
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 1em;
+  width: 100%;
+}
+
+thead {
+  background-color: darken($white, 5%);
+  border-bottom: 1px solid darken($white, 7%);
+}
+
+tr,
+td {
+  border-bottom: 1px solid darken($white, 7%);
+}
+
+th,
+td {
+  border-right: 1px solid darken($white, 7%);
+  padding: 0.5em;
+  text-align: center;
+
+  a {
+    text-decoration: none !important;
+  }
+}
+
+th:first-child,
+td:first-child {
+  text-align: left;
+}
+
+th:last-child,
+td:last-child {
+  text-align: right;
+}
+
+.gist {
+  tr,
+  td {
+    border-bottom: 0;
+  }
+}
+
+pre {
+  line-height: 1.5;
+  margin: 0;
+  overflow-x: auto;
+  padding: 1rem;
+}
+
+p > code,
+a > code,
+li > code,
+figcaption > code,
+td > code {
+  background-color: darken($white, 5%);
+  border-radius: 2px;
+  font-family: $base-font;
+  font-size: 0.9em;
+  padding: 0.1rem 0.2rem;
+}
+
+main {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+canvas {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+footer {
+  color: #ccc;
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  @include vendor-prefix(user-select, none);
+}
+
+.content {
+  margin: 0 auto;
+  max-width: 60rem;
+  min-height: calc(100% - 4rem);
+  padding: 6rem;
+}
+
+.logo {
+  background-size: 100%;
+  display: inline-block;
+  height: auto;
+  margin: 0 auto;
+  opacity: 0.5;
+  position: relative;
+  text-shadow: none;
+}
+
+#left {
+  @include left-background($background-home);
+  background-position: inherit;
+  float: left;
+
+  .content {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+#left,
+#right {
+  display: table;
+  height: 100%;
+  position: relative;
+  width: 50%;
+
+  > div {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+#right {
+  display: block;
+  float: right;
+  overflow-y: auto;
+}

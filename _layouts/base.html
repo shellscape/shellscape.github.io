@@ -1,0 +1,62 @@
+---
+
+---
+<!DOCTYPE html>
+<html>
+{% include layout/head.html %}
+<body id="{{ layout.id }}" class="{{ page.pageId }}">
+
+  {% include layout/sidebar.html %}
+
+  <main>
+    <section id="left">
+      <div class="content">
+        {% if page.contentId %}
+        {% capture left-content %}left/{{ page.contentId }}.html{% endcapture %}
+        {% else %}
+        {% capture left-content %}left/{{ layout.id }}.html{% endcapture %}
+        {% endif %}
+        {% include {{ left-content }} %}
+      </div>
+    </section>
+
+    <section id="right">
+      <nav>
+        <a href="{{ site.baseurl }}/posts" title="The Blog" id="nav-posts">
+          <div></div>
+          <label title="Blog Posts">Posts</span>
+        </a>
+        <a href="{{ site.baseurl }}/projects" title="Software / Projects" id="nav-projects">
+          <div></div>
+          <label title="Software / Projects">Projects</span>
+        </a>
+        <a title="Site Navigation" id="nav-sidebar">
+          <label for="sidebar-checkbox"></label>
+        </a>
+      </nav>
+
+      <div class="content">
+        {{ content }}
+      </div>
+
+      <footer>&copy; {{ site.time | date: '%Y' }}. Andrew Powell. All rights reserved.</footer>
+    </section>
+
+  </main>
+
+  {% include layout/scripts.html %}
+
+  {% if layout.scripts %}
+    {% assign scripts = layout.scripts %}
+  {% endif %}
+  {% if page.scripts %}
+    {% assign scripts = page.scripts %}
+  {% endif %}
+
+  {% if scripts %}
+    {% for script in layout.scripts %}
+      <script src="{{ site.baseurl }}{{script}}"></script>
+    {% endfor %}
+  {% endif %}
+</body>
+</html>
