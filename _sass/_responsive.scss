@@ -5,7 +5,16 @@
 @media (max-width: 550px) {}
 
 /* < = tablet */
-@media (max-width: 750px) {}
+@media (max-width: 750px) {
+  html,
+  body {
+    overflow: auto;
+  }
 
-/* < = desktop */
-@media (max-width: 960px) {}
+  #left,
+  #right {
+    float: none;
+    overflow-y: inherit;
+    width: 100%;
+  }
+}
