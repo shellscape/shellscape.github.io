@@ -13,7 +13,6 @@ $background-post-list: '{{ site.baseurl }}/{{ site.background.post-list }}';
 @import 'base';
 @import 'utilities';
 @import 'syntax';
-@import 'responsive';
 
 // components
 @import 'nav';
@@ -27,3 +26,6 @@ $background-post-list: '{{ site.baseurl }}/{{ site.background.post-list }}';
 @import 'post-list';
 @import 'projects';
 @import 'tags';
+
+// last for best
+@import 'responsive';
