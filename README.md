@@ -22,5 +22,5 @@ It's also worth noting that not one bit of jQuery or other Javascript library wa
 I wrote this with the intention that it'd be bleeding edge, and with that it means that there will be some things that don't work on older browsers. However, the site should be comletely functional otherwise. Fun stuff like the Github Graph on the [projects page](http://shellscape.org/projects) won't load outside of latest Chrome, Firefox, and preview builds of Safari. Everything not supported is designed to fallback gracefully.
 
 ### Todo
-[ ] Add Linting of SCSS and Javascript  
-[ ] Get to blogging
+- [ ] Add Linting of SCSS and Javascript  
+- [ ] Get to blogging
