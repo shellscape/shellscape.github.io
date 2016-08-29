@@ -8,21 +8,22 @@ $background-home: '{{ site.baseurl }}/{{ site.background.home }}';
 $background-post: '{{ site.baseurl }}/{{ site.background.post }}';
 $background-post-list: '{{ site.baseurl }}/{{ site.background.post-list }}';
 
-@import "variables";
-@import "reset";
-@import "base";
-@import "utilities";
-@import "syntax";
+@import 'variables';
+@import 'reset';
+@import 'base';
+@import 'utilities';
+@import 'syntax';
+@import 'responsive';
 
 // components
-@import "nav";
-@import "sidebar";
+@import 'nav';
+@import 'sidebar';
 
 // pages
-@import "404";
-@import "apps";
-@import "home";
-@import "post";
-@import "post-list";
-@import "projects";
-@import "tags";
+@import '404';
+@import 'apps';
+@import 'home';
+@import 'post';
+@import 'post-list';
+@import 'projects';
+@import 'tags';
