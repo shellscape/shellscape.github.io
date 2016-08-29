@@ -1,4 +1,4 @@
-(function (document) {
+(function (window, document) {
 
   'use strict';
 
@@ -8,7 +8,33 @@
     count = 250,
     flakes = [];
 
+  function debounce(func, wait, immediate) {
+  	var timeout;
+  	return function() {
+  		var context = this, args = arguments;
+  		var later = function() {
+  			timeout = null;
+  			if (!immediate) func.apply(context, args);
+  		};
+  		var callNow = immediate && !timeout;
+  		clearTimeout(timeout);
+  		timeout = setTimeout(later, wait);
+  		if (callNow) func.apply(context, args);
+  	};
+  };
+
+  function init (width, height) {
+    canvas.width = width;
+    canvas.height = height;
+
+    context.fillStyle = color;
+    context.lineWidth = 0.1;
+    context.strokeStyle = color;
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
+    var left = document.querySelector('#left'),
+      interval;
 
     canvas = document.querySelector('canvas');
 
@@ -17,14 +43,11 @@
     }
 
     context = canvas.getContext('2d')
-
-    canvas.width = window.innerWidth / 2;
-    canvas.height = window.innerHeight;
     canvas.style.display = 'block';
 
-    context.fillStyle = color;
-    context.lineWidth = 0.1;
-    context.strokeStyle = color;
+    init(left.offsetWidth, left.offsetHeight);
+
+    flakes = [];
 
     for (var i = 0; i < count; i++) {
       flakes.push(new Flake());
@@ -32,9 +55,14 @@
 
     setInterval(animate, 1000 / 30);
 
+    window.addEventListener('resize', debounce(function () {
+      init(left.offsetWidth, left.offsetHeight);
+    }, 200));
+
   });
 
   function animate () {
+
     context.clearRect(0, 0, canvas.width, canvas.height);
 
     for (var flake of flakes) {
@@ -67,4 +95,4 @@
     }
   }
 
-})(document);
+})(this, document);
