@@ -13,6 +13,9 @@ id: post
   {% endcase %},
 {{ page.date | date: "%Y" }}
 {% endcapture %}
+
+{% include pager.html %}
+
 <article>
   <div class="logo">
     <img src="{{ site.baseurl }}/assets/images/{{ site.logo }}">
@@ -22,7 +25,6 @@ id: post
 </article>
 
 {% include share.html %}
-{% include page-pagination.html %}
 
 <div id="disqus_thread"></div>
 <script>

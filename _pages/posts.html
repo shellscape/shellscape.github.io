@@ -15,7 +15,7 @@ pageId: post-list
     </a>
     <span class="date">{{ post.date | date: '%d %b %Y' }}</span>
   </h2>
-  <span>{{ post.subject | strip_html | truncatewords: 10 }}</span>
+  <span>{{ post.subject | strip_html | truncatewords: 50 }}</span>
   {% if post == site.posts.first %}
   <p>
     {{ post.excerpt | strip_html }}

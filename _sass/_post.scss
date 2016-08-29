@@ -115,16 +115,18 @@ article {
     display: block;
   }
 
-  a:not(.btn):not(.pagination_pager) {
+  a:not(.btn) {
     color: $green;
     border-bottom: 0.1rem dotted $green;
   }
 
   ul,
   ol {
-    padding-left: 3rem;
+    padding-left: 5rem;
 
     > li {
+      color: $dark;
+      font-size: 1.6rem;
       position: relative;
       margin-bottom: 2rem;
 
@@ -224,30 +226,32 @@ article {
   }
 }
 
-.pagination {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  margin: 1em 0;
+.pager {
+  font-size: 1.6rem;
+  left: 0;
+  margin: 0.4em 6rem;
+  right: auto;
+  text-align: left;
+  width: 15rem;
 
-  &_pager {
-    display: inline-block;
-    padding: 0.75em;
-    min-width: 5.5em;
-    font-size: 0.8em;
-    font-weight: 400;
+  a {
     background-color: darken($white, 5%);
     color: darken($white, 35%) !important;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
     cursor: pointer;
+    display: inline-block;
+    font-size: 0.8em;
+    font-weight: 400;
+    margin: 0;
+    min-width: 5.5em;
+    padding: 0.75em;
+    text-align: center;
     transition: all 0.2s linear;
+    vertical-align: middle;
     @include vendor-prefix(user-select, none);
+    white-space: nowrap;
 
     &:first-child {
-      border-radius: 0.4rem 0 0 added a 404 page to my site last night while I was a tad drunk;
+      border-radius: 0.4rem 0 0 0.4rem;
     }
 
     &:last-child {
@@ -261,7 +265,8 @@ article {
 
     &.disabled {
       background-color: darken($white, 3%);
-      color:darken($white, 15%) !important;
+      color: darken($white, 15%) !important;
+      cursor: default;
 
       &:hover {
         background-color: darken($white, 3%);
