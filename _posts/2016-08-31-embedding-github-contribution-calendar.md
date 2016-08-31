@@ -3,7 +3,7 @@ layout: post
 title:  Embedding the Github Contributions Calendar
 date:   2016-08-31
 subject: Because who doesn't love fancy graphs?
-image: assets/images/posts/embedding-github-contribution-calendar.png
+image: /assets/images/posts/embedding-github-contribution-calendar.png
 image-opacity: 0.7
 tag:
 - cors

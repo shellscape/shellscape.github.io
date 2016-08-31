@@ -42,7 +42,7 @@
   {% if page.image %}
   {% capture image %}{{ page.image }}{% endcapture %}
   {% unless image contains 'http://' or image contains 'https://' %}
-    {% capture image %}{{ site.baseurl }}/{{ image }}{% endcapture %}
+    {% capture image %}{{ site.baseurl }}{{ image }}{% endcapture %}
   {% endunless %}
   {% assign opacity = '0.5' %}
   {% if page.image-opacity %}
