@@ -41,10 +41,16 @@
 
   {% if page.image %}
   {% capture image %}{{ page.image }}{% endcapture %}
-  {% unless image contains 'http://' or image contains 'https://' %}{% capture image %}{{ site.baseurl }}/{{ image }}{% endcapture %}{% endunless %}
+  {% unless image contains 'http://' or image contains 'https://' %}
+    {% capture image %}{{ site.baseurl }}/{{ image }}{% endcapture %}
+  {% endunless %}
+  {% assign opacity = '0.5' %}
+  {% if page.image-opacity %}
+    {% assign opacity = page.image-opacity %}
+  {% endif %}
   <style type="text/css">
     #left {
-      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{ image }}) no-repeat;
+      background: linear-gradient(rgba(0, 0, 0, {{ opacity }}), rgba(0, 0, 0, {{ opacity }})), url({{ image }}) no-repeat !important;
       background-size: cover;
     }
   </style>
