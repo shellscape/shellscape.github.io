@@ -47,6 +47,11 @@
   }
 
   #right {
+    .content {
+      display: block;
+      height: auto;
+    }
+
     .logo {
       display: block;
       margin-top: 1rem;
