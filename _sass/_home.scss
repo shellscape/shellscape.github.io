@@ -14,7 +14,6 @@
 .main-info,
 .about-info {
   margin: 0 auto;
-  max-width: 40rem;
   position: relative;
   text-align: center;
   width: 100%;
@@ -58,6 +57,7 @@
 
 .main-info {
   color: $white;
+  max-width: 40rem;
   z-index: 1;
 
   h1 {
