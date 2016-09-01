@@ -24,12 +24,16 @@
           graph,
           gs,
           fill,
-          index;
+          index,
+          rects;
 
         wrapper.innerHTML = body;
 
         graph = wrapper.querySelector('svg.js-calendar-graph-svg');
+
+        // turn NodeLists into plain Arrays
         gs = [].slice.call(graph.querySelectorAll('g g'));
+        rects = [].slice.call(graph.querySelectorAll('rect'));
 
         for (var g of gs) {
           index = gs.indexOf(g);
@@ -42,7 +46,7 @@
           }
         }
 
-        for(var rect of graph.querySelectorAll('rect')) {
+        for(var rect of rects) {
           fill = rect.getAttribute('fill').substring(1);
 
           if (colors[fill]) {

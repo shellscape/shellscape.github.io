@@ -4,7 +4,7 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     var right = document.querySelector('#right'),
-      headers = right.querySelectorAll('h1, h2, h3, h4, h5, h6');
+      headers =  [].slice.call(right.querySelectorAll('h1, h2, h3, h4, h5, h6'));
 
     for(var header of headers) {
       var text = header.innerHTML.split(' ');
