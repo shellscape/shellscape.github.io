@@ -20,13 +20,13 @@
   margin-top: 1rem;
 
   > li {
-    display: inline-block;
     background: transparent;
-    padding: 0.7rem 1rem;
     color: lighten($black, 28%);
+    display: inline-block;
     font-size: 1.1rem;
-    text-transform: uppercase;
     margin: 0.4rem 0.1rem 0 0;
+    padding: 0.7rem 1rem;
+    text-transform: uppercase;
 
     > a {
       color: $white;

@@ -258,9 +258,10 @@ footer {
 
 .content {
   margin: 0 auto;
-  max-width: 60rem;
-  min-height: calc(100% - 4rem);
   padding: 6rem;
+  position: relative;
+  width: 100%;
+  z-index: 1;
 }
 
 .logo {
@@ -277,17 +278,13 @@ footer {
   @include left-background($background-home);
   background-position: inherit;
   float: left;
-
-  .content {
-    position: relative;
-    z-index: 1;
-  }
 }
 
 #left,
 #right {
   display: table;
   height: 100%;
+  // padding: 6rem;
   position: relative;
   width: 50%;
 
