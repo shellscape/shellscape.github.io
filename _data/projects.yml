@@ -2,6 +2,10 @@
   desc: An extension for a pure, clean Facebook experience
   inprogress: true
 
+- title: Gumshoe
+  desc: An alternative analytics and event tracking library.
+  repo: gilt/Gumshoe
+
 - title: Lesshint
   desc: A tool to aid you in writing clean and consistent Less
   repo: lesshint/lesshint
