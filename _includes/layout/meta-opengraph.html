@@ -14,7 +14,7 @@
   {% unless image contains 'http://' or image contains 'https://' %}
     {% capture image %}{{ site.url }}{{ image }}{% endcapture %}
     {% endunless %}
-<meta property="og:image" content="{{ site.url }}{{ image }}">
+<meta property="og:image" content="{{ image }}">
 {% else %}
 <meta property="og:image" content="{{ site.url }}/assets/images/shellscape-og.png">
 {% endif %}
