@@ -6,11 +6,12 @@ subject: Because who doesn't love fancy graphs?
 image: /assets/images/posts/embedding-github-contribution-calendar.png
 image-opacity: 0.7
 tag:
-- cors
-- esnext
-- fetch
-- github
-- site
+  - cors
+  - esnext
+  - fetch
+  - github
+  - javascript
+  - site
 ---
 
 While working on the [site rewrite](http://shellscape.org/2016/08/29/shellscape-refresh-rewrite)

@@ -4,9 +4,9 @@ title:  Shellscape Refresh and Rewrite
 date:   2016-08-29
 subject: Fortunately, something always remains to be harvested. So let us not be idle.
 tag:
-- blog
-- jekyll
-- site
+  - blog
+  - jekyll
+  - site
 ---
 
 After a few years of neglect and a lack of direction for the site, Shellscape.org
