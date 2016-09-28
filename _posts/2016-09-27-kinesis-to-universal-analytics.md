@@ -2,7 +2,7 @@
 layout: post
 title:  From AWS Kinesis to Universal Analytics
 date:   2016-09-27
-subject: Never underestimate your personal brand.
+subject: AWS, Lambda, Node.js, All the Goodies.
 image: /assets/images/posts/kinesis-to-universal-analytics.jpg
 image-opacity: 0.7
 background-position: 50% 0
