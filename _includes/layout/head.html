@@ -54,7 +54,10 @@
   <style type="text/css">
     #left {
       background: linear-gradient(rgba(0, 0, 0, {{ opacity }}), rgba(0, 0, 0, {{ opacity }})), url({{ image }}) no-repeat !important;
-      background-size: cover;
+      background-size: cover !important;
+      {% if page.background-position %}
+      background-position: {{ page.background-position }} !important;
+      {% endif %}
     }
   </style>
   {% endif %}
