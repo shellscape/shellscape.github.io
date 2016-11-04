@@ -99,7 +99,7 @@ page at `index.html` with a logo and some links. That also generates the
 ### Enter Webpack
 
 Getting a Vue app working right means bundling correctly. We use Webpack, but
-there are a lot of exmaples out there with Browserify if you prefer that.
+there are a lot of examples out there with Browserify if you prefer that.
 [Webpack](https://webpack.github.io/) is a wonderful bundling tool and can
 perform a host of functions. So much so that it can be considered a full-fledged
 build tool. You'll need a `webpack.config.js` file to kick things off:
