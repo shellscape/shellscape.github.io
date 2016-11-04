@@ -208,9 +208,15 @@ td:last-child {
 }
 
 .gist {
+  margin-top: 2em;
+
   tr,
   td {
     border-bottom: 0;
+  }
+
+  .gist-data {
+    max-height: 30em;
   }
 }
 
