@@ -34,7 +34,7 @@ production deployment.
 
 ### The Scenario
 
-Let's say that ficticious `module-a` depends on `module-b` and `module-util`. And
+Let's say that fictitious `module-a` depends on `module-b` and `module-util`. And
 that `module-b` also depends on `module-util`. That's a pretty straightforward
 tree and the bundle for the scripts of that tree should be easy. You'd think.
 But consider that scenario if `module-a` depends on `module-util@1.0.0` and
