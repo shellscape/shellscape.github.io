@@ -160,4 +160,4 @@ to allow live development and Hot Module Reloading. That means you don't have to
 restart your server to rebuild your bundles, and you see changes nearly instantly.
 It's cool, right?
 
-Cheers
+### Cheers!
