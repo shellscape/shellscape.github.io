@@ -19,7 +19,7 @@ pageId: post-list
   {% if post == site.posts.first %}
   <p>
     {{ post.excerpt | strip_html }}
-    ...<a href="{{ site.baseurl }}{{ post.url }}" title="Read More">Read More</a>
+    <a href="{{ site.baseurl }}{{ post.url }}" title="Read More">&nbsp;→ Read More</a>
   </p>
   {% endif %}
   <ul class="tags">
