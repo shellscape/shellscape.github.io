@@ -73,8 +73,8 @@ with regard to my brand.
 
 Gilt was always a tumultuous business; it's well-documented on a myriad of
 business websites and blogs. In late 2015 the company underwent significant
-layoffs. _**PANIC MODE**_. Then in early 2016 it Gilt was purchased by a larger
-corporation. Without going into detail - lots of people where *very* unhappy.
+layoffs. _**PANIC MODE**_. Then in early 2016 Gilt was purchased by a larger
+corporation. Without going into detail - lots of people were *very* unhappy.
 
 After sticking it out for the first quarter, I decided it was prudent to start
 looking at what was out there. I was really excited; there were great companies
