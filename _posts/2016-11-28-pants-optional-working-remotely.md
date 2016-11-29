@@ -11,6 +11,7 @@ tag:
 - life
 - remote work
 - time management
+- work life balance
 ---
 
 I've been working remotely for nearly 7 years now, and I couldn't imagine ever
