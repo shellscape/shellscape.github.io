@@ -77,7 +77,7 @@ I'm always [open to suggestions](https://github.com/shellscape/gulp-assist/issue
 
 The great thing about Gulp is that there's a slew of alternatives for any one
 thing you might want to get done. With that, you might enjoy
-[gulp-help](https://www.npmjs.com/package/gulp-help) moreso than my plugin.
+[gulp-help](https://www.npmjs.com/package/gulp-help) more so than my extension.
 It hooks the `gulp.task` method to allow for additional parameters that
 describe a task.
 
