@@ -120,10 +120,10 @@ article {
     display: block;
   }
 
-  a:not(.btn) {
-    color: $green;
-    border-bottom: 0.1rem dotted $green;
-  }
+  // a:not(.btn) {
+  //   color: $green;
+  //   border-bottom: 0.1rem dotted $green;
+  // }
 
   ul,
   ol {
@@ -184,12 +184,12 @@ article {
       width: calc(100% - 10rem);
     }
 
-    a {
-      color: $green;
-      &:hover {
-        color: #4dbe7a;
-      }
-    }
+    // a {
+    //   color: $green;
+    //   &:hover {
+    //     color: #4dbe7a;
+    //   }
+    // }
 
     em {
       display: inline-block;
