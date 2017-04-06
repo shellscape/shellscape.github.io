@@ -27,15 +27,9 @@ body {
 }
 
 a {
-  border-bottom: .08em solid rgba(0,0,0,.1);
   color: $green;
   outline: none;
   text-decoration: none;
-  padding-bottom: .08em;
-}
-
-a:hover {
-  border-bottom: .08em solid $green;
 }
 
 a:hover,

@@ -142,3 +142,7 @@ nav {
                         $green 90%, $green 100%);
   }
 }
+
+#right > nav a {
+  border: 0 !important;
+}
