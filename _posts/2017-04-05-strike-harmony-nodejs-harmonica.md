@@ -115,6 +115,6 @@ of the experimental / unstable features that are hidden behind `harmony` flags
 can come with issues that affect security, performance, etc. It's never advisable
 to use `harmony` features in a production environment unless thoroughly vetted.
 
-Now, get to dabbling with the latest that Node.js has to offer!
+Now get to dabbling with the latest that Node.js has to offer!
 
-Cheers!
+### Cheers!
