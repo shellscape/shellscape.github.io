@@ -75,7 +75,7 @@ Since our implementation is not (yet!) engineering-owned, we can't run tests and
 such on the data in a pre-production environment. Some would argue that Signal has
 some pre-production ability, but even "Previewing" tags and events still runs live
 in production. So we needed a method for our Marketing and Analytics teams to be
-able to debug in a familiar way (which unfortunately `console.log`) but in a
+able to debug in a familiar way (which is unfortunately `console.log`) but in a
 _controlled_ manner that doesn't affect the world.
 
 <script src="https://gist.github.com/shellscape/fdcd98aa743b683eb4539336b06200c9.js"></script>
