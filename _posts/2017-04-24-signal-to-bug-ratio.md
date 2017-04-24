@@ -62,7 +62,7 @@ One of the more egregious was the overuse of `console.log`.
 
 Our Signal managing teams were advised to use `console.log` wherever they wanted
 to view the value/content of `eventData` for each event that came through Signal.
-That resulted in **_well over 200 instances_** of `console.log` sprinkled throughout
+That resulted in **_well over 50 instances_** of `console.log` sprinkled throughout
 just one of five Dashboards. That's a hell of a lot of console noise for a single
 page. Imagine engineers for the site trying to figure out where all the noise was
 originating, having no knowledge of the Signal implementation nor what it was doing.
