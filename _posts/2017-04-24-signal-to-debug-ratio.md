@@ -4,7 +4,7 @@ title:   Signal to Bug Ratio
 date:    2017-04-24
 subject: Debugging Signal events can be problematic, exacerbated by a lack of tools.
 image:   /assets/images/posts/signal-to-bug-ratio.jpg
-image-opacity: 0.4
+image-opacity: 0.8
 tag:
 - 'bright-tag'
 - events
@@ -17,7 +17,7 @@ tag:
 ---
 
 *Preface: I work with Signal through my regular job, I'm not promoting the product
- or service in any way* [Signal](https://www.signal.co/) is a platform for
+ or service in any way.* [Signal](https://www.signal.co/) is a platform for
   implementing and managing tags and data for marketing, tracking, and affiliates.
   Debugging Signal events can be very problematic, exacerbated by a lack of tools,
   guidance on best practices, and engineering support.
@@ -86,7 +86,7 @@ done in two ways, but adding `?debug=true` to the URI and refreshing, or by call
 `bananas.signal.enable()` in the console before executing an action on the page
 that will trigger a Signal event.
 
-![debug output](assets/images/in-post/signal-debug-output.png)
+![debug output](/assets/images/in-post/signal-debug-output.png)
 
 Only the debugging user will ever see the output.
 Zero console pollution.
