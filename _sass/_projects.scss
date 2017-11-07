@@ -35,7 +35,7 @@
       display: block;
       margin-top: 1rem;
       text-align: center;
-      width: 100%;
+      width: 35.5rem;
 
       span, ul, li {
         display: inline-block;
@@ -172,11 +172,15 @@
     }
 
     > g > g &:nth-child(-n+26) {
-      display: none;
+      border: 1px solid red;
     }
 
     .month {
-      transform: translateX(-32.5rem);
+      // transform: translateX(-32.5rem);
+    }
+
+    .wday {
+      // display: none;
     }
   }
 

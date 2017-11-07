@@ -34,6 +34,20 @@
         // turn NodeLists into plain Arrays
         gs = [].slice.call(graph.querySelectorAll('g g'));
         rects = [].slice.call(graph.querySelectorAll('rect'));
+        months = [].slice.call(graph.querySelectorAll('.month'))
+
+        console.log(months)
+
+        for (const month of months) {
+          index = months.indexOf(month);
+
+          if (index < 6) {
+            month.parentElement.removeChild(month);
+          }
+          else {
+            month.setAttribute('transform', 'translate(-306, 0)');
+          }
+        }
 
         for (var g of gs) {
           index = gs.indexOf(g);
@@ -42,7 +56,7 @@
             g.parentElement.removeChild(g);
           }
           else {
-            g.attributes.transform.value = 'translate(' + (13 * (index - 26)) + ', 0)';
+            g.attributes.transform.value = 'translate(' + (13 * (index - 23.5)) + ', 0)';
           }
         }
 
@@ -59,7 +73,7 @@
         graph.setAttribute('xmlns:xlink', 'http://www.w3.org/1999/xlink');
         graph.setAttribute('xml:space', 'preserve');
 
-        container.innerHTML = graph.outerHTML; //.replace(/\#eeeeee/gi, '#ccc');
+        container.innerHTML = graph.outerHTML;
       });
 
   });

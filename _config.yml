@@ -41,8 +41,8 @@ github:             shellscape
 stackoverflow:      416845/shellscape
 linkedin:           powellonaboat
 
-# Gems
-gems:
+# Plugins
+plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-gist
