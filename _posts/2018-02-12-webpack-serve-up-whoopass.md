@@ -95,8 +95,11 @@ was too good to pass up and you can't like just eat half of it right?
 #### We Better Install It First
 
 ```console
-$ npm install webpack-serve --save-dev
+$ npm install webpack-serve@next --save-dev
 ```
+
+We're still in pre-release beta, this-could-go-sideways mode, so you'll need
+that `@next` part.
 
 You can also install it globally, though it's not recommended, and will use a
 local install if one exists.
