@@ -15,10 +15,10 @@ tag:
 - beta
 ---
 
-All aboard the S.S. Shipit. Come, break my things. I present
-[`webpack-serve`](https://github.com/webpack-contrib/webpack-serve):
-A lean, modern, and flexible _webpack-dev-server_ alternative. And it's
-gonna serve up a big 'ol side of whoop-ass on your development experience for
+All aboard the S.S. Shipit. Come, break my things. I present 
+[`webpack-serve`](https://github.com/webpack-contrib/webpack-serve): 
+A lean, modern, and flexible _webpack-dev-server_ alternative. And it's 
+gonna serve up a big 'ol side of whoop-ass on your development experience for 
 [webpack](https://webpack.js.org).
 
 <!-- more -->
