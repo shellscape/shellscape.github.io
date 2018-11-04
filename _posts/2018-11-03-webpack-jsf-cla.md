@@ -25,6 +25,8 @@ _It is likely that this post will be attacked by those passionate about webpack 
 
 I do not like the spotlight in tech, and I do not seek it. However, I do feel that the information in this post needs to be shared. This post will not name names and will not call out individuals for action, or a lack thereof. Rather, already public information will speak for those involved.
 
+_Update (Nov 3rd 2018 23:12 UTC): Since posting and sharing this article, the webpack project has [taken steps to remedy the situation](https://github.com/webpack-contrib/webpack-log/pull/14). It's regrettable that it took this article to gain action, but it is appreciated. I don't have knowledge as to whether or not JSF had a part in the remedy. This article should still serve as a cautionary tale on licensing, copyright, and Contributor License Agreements._
+
 ## Backstory
 
 I want to quickly share some backstory that I have not shared publicly prior, so that the issue, situation, and links contained in this post have some context for the reader.
