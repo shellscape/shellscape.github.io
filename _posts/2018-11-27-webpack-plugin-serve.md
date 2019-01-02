@@ -85,7 +85,7 @@ We also took the approach of building in support for the most popular feature se
 
 I'd also argue that this approach is far cleaner than the others that preceded it. We've given a lot of consideration to how the feature set might be expanded and have put an architecture in place that should allow for new features to be supported without adding the kind of complexity that cripples maintainability. We learned quite a bit from the shortcomings of both webpack-dev-server and webpack-serve, and really made an effort to improve upon them.
 
-Lastly, and what is sure to be a slightly controversial choice, we chose to only support the [latest Active LTS version](https://github.com/nodejs/Release) of Node, which is presently v10. We've covered why in our [FAQ](https://github.com/shellscape/webpack-plugin-serve/blob/master/.github/FAQ.md), though unsupported [workarounds have been discovered](https://github.com/shellscape/webpack-plugin-serve/issues/34) for Node v8.
+Lastly, and what is sure to be a slightly controversial choice, we chose to support only the [Active LTS versions](https://github.com/nodejs/Release) of Node, which is presently v8 and v10, and the _Current_ version (Node v11 as of this post date). We've covered why in our [FAQ](https://github.com/shellscape/webpack-plugin-serve/blob/master/.github/FAQ.md).
 
 ## Forthright Finale
 
