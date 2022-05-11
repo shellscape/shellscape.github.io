@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+  <script src="ClientSocket.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(() => {
+      $('div').text(+new Date());
+      const socket = new ClientSocket({}, 'wss://7b11b043ni.execute-api.us-east-1.amazonaws.com/stage/');
+
+      window.addEventListener('beforeunload', () => socket.close());
+
+      socket.addEventListener('message', (message) => {
+        const data = JSON.parse(message.data);
+        console.log(message)
+        if (data.refresh) window.location.reload(true)
+      });
+
+      window.sock = socket;
+    })
+  </script>
+</head>
+<body>
+  <div></div>
+  <p>message: <span></span></p>
+</body>
+</html>
